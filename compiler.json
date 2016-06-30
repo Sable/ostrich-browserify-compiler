@@ -1,0 +1,32 @@
+{
+    "type": "compiler",
+    "short-name":"browserify",
+    "name": "Browserify",
+    "supported-languages":[
+        "js"
+    ],
+    "target-languages":[
+        "js"
+    ],
+    "runner-name":"runner.js",
+    "commands": [
+        {   "executable-name": "cat",
+            "options": [
+                { "config": "/implementation/core-source-files"},
+                { "config": "/implementation/libraries", "optional": true },
+                { "config": "/implementation/runner-source-file"},
+                { "file":   "./exports.js"},
+                " > ",
+                "sources.js"
+            ]
+        },
+        {   "executable-path": { "file": "./node_modules/browserify/bin/cmd.js" },
+            "options": [
+                "sources.js",
+                " -s browserify ",
+                " > ",
+                { "config": "/compiler/runner-name" }
+            ]
+        }
+    ]
+}
