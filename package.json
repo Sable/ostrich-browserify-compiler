@@ -1,6 +1,11 @@
 {
   "name": "ostrich-browserify-compiler"
   , "version": "1.0.0"
+  , "repository": { 
+      "type" : "git"
+      , "url" : "https://github.com/Sable/ostrich-browserify-compiler"
+  }
+  , "license": "Apache-2.0"
   , "dependencies": {
     "browserify": "13.x.x"
   }
