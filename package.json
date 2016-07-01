@@ -1,12 +1,15 @@
 {
   "name": "ostrich-browserify-compiler"
   , "version": "1.0.0"
+  , "bin": "bin/cmd.js"
   , "repository": { 
       "type" : "git"
       , "url" : "https://github.com/Sable/ostrich-browserify-compiler"
   }
   , "license": "Apache-2.0"
   , "dependencies": {
-    "browserify": "13.x.x"
+    "browserify": "13.x.x",
+    "minimist": "1.x.x",
+    "multistream": "2.x.x"
   }
 }

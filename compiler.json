@@ -10,22 +10,21 @@
     ],
     "runner-name":"runner.js",
     "commands": [
-        {   "executable-name": "cat",
+        {   "executable-path": { "file": "./bin/cmd.js" },
             "options": [
-                { "config": "/implementation/core-source-files"},
-                { "config": "/implementation/libraries", "optional": true },
-                { "config": "/implementation/runner-source-file"},
-                { "file":   "./exports.js"},
-                " > ",
-                "sources.js"
-            ]
-        },
-        {   "executable-path": { "file": "./node_modules/browserify/bin/cmd.js" },
-            "options": [
-                "sources.js",
-                " -s browserify ",
-                " > ",
-                { "config": "/compiler/runner-name" }
+                { 
+                    "prefix": "-f", 
+                    "value": { "config": "/implementation/core-source-files"}
+                },
+                { 
+                    "prefix": "-f", 
+                    "value": { "config": "/implementation/libraries", "optional": true }
+                },
+                { 
+                    "prefix": "-f", 
+                    "value": { "config": "/implementation/runner-source-file"}
+                },
+                " -o ", { "config": "/compiler/runner-name" }
             ]
         }
     ]
