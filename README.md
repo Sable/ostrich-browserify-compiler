@@ -4,6 +4,6 @@ Package for using browserify as a JavaScript compiler in the Ostrich benchmark s
 # Use in the Ostrich benchmarking suite
 
     cd OSTRICH_ROOT/compilers
-    git clone git@github.com/Sable/ostrich-browserify-compiler browserify
+    git clone git@github.com:Sable/ostrich-browserify-compiler.git browserify
     cd browserify
     npm install
